@@ -1,0 +1,6 @@
+python3-dev
+libmysqlclient-dev
+zlib1g-dev
+mysqlclient==1.3.10
+SQLAlchemy==1.2.5
+Flask
