@@ -27,7 +27,9 @@ class TestDBStorage(unittest.TestCase):
             Base.metadata.create_all(cls.storage._DBStorage__engine)
             Session = sessionmaker(bind=cls.storage._DBStorage__engine)
             cls.storage._DBStorage__session = Session()
-            cls.user = User(email="jm@gmail.com", password="pass123")
+            cls.user = User(email="jm@gmail.com", password="pass123",
+                            first_name="juan", last_name="ramierz",
+                            phone="3226571761")
             cls.storage._DBStorage__session.add(cls.user)
             cls.storage._DBStorage__session.commit()
 
